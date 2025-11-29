@@ -36,7 +36,7 @@ export default defineConfig({
   use: {
     
     trace: 'on-first-retry',
-    headless: false,
+    headless: true,
     screenshot:'on-first-failure',  // only-on-failure',
     video :'on',
     baseURL:'https://naveenautomationlabs.com/opencart/index.php',
@@ -67,7 +67,7 @@ export default defineConfig({
       }
     }
   },
-
+/*
   {
     name: 'Microsoft Edge',
     use: {
@@ -115,6 +115,7 @@ export default defineConfig({
       }
     }
   }
-],
+    */
+], 
 
 });
