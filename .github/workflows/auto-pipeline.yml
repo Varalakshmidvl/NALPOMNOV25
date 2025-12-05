@@ -998,4 +998,4 @@ jobs:
           echo "Slack: ${{ steps.slack.outcome == 'success' && '✅ Sent' || (steps.slack.outcome == 'skipped' && '⏭️ Skipped' || '❌ Failed') }}"
           echo "Email: ${{ steps.email.outcome == 'success' && '✅ Sent' || '❌ Failed - Check logs above' }}"
           echo ""
-          echo "============================================"
+          echo "============================================"  
