@@ -20,7 +20,7 @@ export default defineConfig({
     ['playwright-html-reporter', { 
       testFolder: 'tests',
       title: 'OPEN CART HTML Report',
-      project: 'POMFWNOV25',
+      project: 'NALPOMNOV25',
       release: '9.87.6',
       testEnvironment: 'QA',
       embedAssets: true,
