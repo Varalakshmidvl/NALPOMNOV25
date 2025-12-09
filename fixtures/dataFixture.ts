@@ -10,7 +10,7 @@ type RegData = {
     subscribeNewsletter: string,
 }
 
-let fileContent = fs.readFileSync('./data/register.csv', 'utf-8');
+const fileContent = fs.readFileSync('./data/register.csv', 'utf-8');
 
  const registerationData:RegData[]  = parse(fileContent, {
     columns: true,
@@ -23,15 +23,17 @@ type csvFixture={
 }
 
     export const dataTest = base.extend<csvFixture>({
-
-            regData: async({}, use)=>{
+   
+         regData: async({}, use)=>{
+            //....
+         
         const fileContent = fs.readFileSync('./data/register.csv', 'utf-8');
 
        const registerationData:RegData[]  = parse(fileContent, 
         {
        columns: true,
        });
-        await use(registerationData)
+        await use(registerationData);
     }
    
 

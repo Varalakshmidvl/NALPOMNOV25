@@ -36,13 +36,13 @@ export class HomePage{
 }
     
       async isUserLoggedIn():Promise<boolean>{
-     return await this.eleUtil.isVisible(this.logoutLink,0)
+     return await this.eleUtil.isVisible(this.logoutLink,0);
       }
 
       async logout():Promise<LoginPage>{
         await this.eleUtil.click(this.logoutLink,{timeout:5000 },1);
         await this.eleUtil.click(this.loginLink,{timeout :5000 },1);
-        return new LoginPage(this.page)
+        return new LoginPage(this.page);
     
     }
    
@@ -50,7 +50,7 @@ export class HomePage{
      console.log('search Key: ${searchKey}');
      await this.eleUtil.fill(this.search ,searchKey);
      await this.eleUtil.click(this.searchicon);
-     return new ResultsPage(this.page)
+     return new ResultsPage(this.page);
 
     }
 
