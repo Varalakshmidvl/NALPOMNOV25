@@ -21,7 +21,7 @@ export const test = base.extend<MyFixtures>({
         await use(homePage);
 
     }
-})
+});
 
-export { expect }
+export { expect };
 //to export in other classes
