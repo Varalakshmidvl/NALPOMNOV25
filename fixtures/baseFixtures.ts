@@ -9,14 +9,14 @@ type MyFixtures = {
 export const test = base.extend<MyFixtures>({
     homePage: async ({ page, baseURL }, use, testInfo) => {
 
-        const loginPage = new LoginPage(page)
-        await loginPage.goToLoginPage(baseURL)
+        const loginPage = new LoginPage(page);
+        await loginPage.goToLoginPage(baseURL);
 
-        const username = testInfo.project.metadata.appUsername
-        const password = testInfo.project.metadata.appPassword
+        const username = testInfo.project.metadata.appUsername;
+        const password = testInfo.project.metadata.appPassword;
 
-        const homePage = await loginPage.doLogin(username, password)
-        expect(homePage.isUserLoggedIn()).toBeTruthy()
+        const homePage = await loginPage.doLogin(username, password);
+        expect(homePage.isUserLoggedIn()).toBeTruthy();
 
         await use(homePage);
 

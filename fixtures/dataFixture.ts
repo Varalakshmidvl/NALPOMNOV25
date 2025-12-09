@@ -14,7 +14,7 @@ let fileContent = fs.readFileSync('./data/register.csv', 'utf-8');
 
 let registerationData:RegData[]  = parse(fileContent, {
     columns: true,
-    skip_empty_lines: true
+    skip_empty_lines: true,
 });
 
 type csvFixture={

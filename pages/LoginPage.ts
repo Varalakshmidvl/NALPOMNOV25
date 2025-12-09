@@ -33,7 +33,7 @@ export class LoginPage{
     //Navigate to login Page
 
      async goToLoginPage(baseURL: string | undefined){
-       await this.page.goto(baseURL+'?route=account/login')
+       await this.page.goto(baseURL+'?route=account/login');
   
    }
 
@@ -58,14 +58,14 @@ export class LoginPage{
 
  async getInvalidLoginMessage():Promise<string |null>{
 
-   const errorMsg =await this.eleUtil.getText(this.warningMsg)
+   const errorMsg =await this.eleUtil.getText(this.warningMsg);
    console.log('invalid login warning message'+ errorMsg);
   return errorMsg
   
  }
   async navigateToRegisterPage(){
-   await this.eleUtil.click(this.registerlink,{force:true},1)
-   return new RegisterPage(this.page)
+   await this.eleUtil.click(this.registerlink,{force:true},1);
+   return new RegisterPage(this.page);
 
   }
 

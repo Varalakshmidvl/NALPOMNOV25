@@ -49,7 +49,7 @@ export class HomePage{
     async dosearch(searchKey: string){
      console.log('search Key: ${searchKey}');
      await this.eleUtil.fill(this.search ,searchKey);
-     await this.eleUtil.click(this.searchicon)
+     await this.eleUtil.click(this.searchicon);
      return new ResultsPage(this.page)
 
     }

@@ -17,19 +17,19 @@ export class ResultsPage{
     this.page = page;
    // this.emailId = page.locator('#input-email')
     this.eleUtil = new ElementUtil(page);
-    this.results = page.locator('.product-thumb') //count of no.of products on the page
+    this.results = page.locator('.product-thumb');//count of no.of products on the page
       
    }
    //3.page actions:
     
    async getSearchResultsCount():Promise<number>{
-    return await this.results.count()
+    return await this.results.count();
    }
 
    async selectProduct(productName:string){
    console.log("=============Product name:=========== " + productName);
-   await this.eleUtil.click(this.page.getByRole('link', { name: `${productName}` }))
-   return new ProductInfoPage(this.page)
+   await this.eleUtil.click(this.page.getByRole('link', { name: `${productName}` }));
+   return new ProductInfoPage(this.page);
 
    }
 

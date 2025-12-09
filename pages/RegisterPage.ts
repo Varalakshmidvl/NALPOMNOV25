@@ -3,18 +3,18 @@ import { ElementUtil } from '../utils/ElementUtil';
 
 export class RegisterPage {
     private readonly page: Page;
-    private readonly firstNameInput: Locator
-    private readonly LastNameInput: Locator
-    private readonly emailInput: Locator
-    private readonly telephoneInput: Locator
-    private readonly passwordInput: Locator
-    private readonly confirmPasswordInput: Locator
-    private readonly newsletterYesRadio: Locator
-    private readonly newsletterNoRadio: Locator
-    private readonly agreeCheckbox: Locator
-    private readonly continueButton: Locator
-    private readonly successMsg: Locator
-    private readonly eleUtil
+    private readonly firstNameInput: Locator;
+    private readonly LastNameInput: Locator;
+    private readonly emailInput: Locator;
+    private readonly telephoneInput: Locator;
+    private readonly passwordInput: Locator;
+    private readonly confirmPasswordInput: Locator;
+    private readonly newsletterYesRadio: Locator;
+    private readonly newsletterNoRadio: Locator;
+    private readonly agreeCheckbox: Locator;
+    private readonly continueButton: Locator;
+    private readonly successMsg: Locator;
+    private readonly eleUtil;
 
     constructor(page: Page) {
         this.page = page
@@ -43,27 +43,27 @@ export class RegisterPage {
         telephone: string,
         password: string,
         subscribeNewsletter: string): Promise<boolean> {
-        await this.eleUtil.fill(this.firstNameInput, firstName)
-        await this.eleUtil.fill(this.LastNameInput, lastName)
-        await this.eleUtil.fill(this.emailInput, email)
-        await this.eleUtil.fill(this.telephoneInput, telephone)
-        await this.eleUtil.fill(this.passwordInput, password)
-        await this.eleUtil.fill(this.confirmPasswordInput, password)
+        await this.eleUtil.fill(this.firstNameInput, firstName);
+        await this.eleUtil.fill(this.LastNameInput, lastName);
+        await this.eleUtil.fill(this.emailInput, email);
+        await this.eleUtil.fill(this.telephoneInput, telephone);
+        await this.eleUtil.fill(this.passwordInput, password);
+        await this.eleUtil.fill(this.confirmPasswordInput, password);
 
         if (subscribeNewsletter === "Yes") {
-            await this.eleUtil.click(this.newsletterYesRadio)
+            await this.eleUtil.click(this.newsletterYesRadio);
         }
         else {
-            await this.eleUtil.click(this.newsletterNoRadio)
+            await this.eleUtil.click(this.newsletterNoRadio);
         }
-        await this.eleUtil.click(this.agreeCheckbox)
-        await this.eleUtil.click(this.continueButton)
+        await this.eleUtil.click(this.agreeCheckbox);
+        await this.eleUtil.click(this.continueButton);
 
         return await this.successMsg.isVisible();
     }
 
     async verifyAccountCreated() {
-        await expect(this.successMsg).toBeVisible()
+        await expect(this.successMsg).toBeVisible();
 
     }
 }

@@ -4,11 +4,11 @@ import { ElementUtil } from '../utils/ElementUtil';
 export class ProductInfoPage {
 
     private readonly page: Page;
-    private readonly eleUtil: ElementUtil
-    private readonly header: Locator
-    private readonly imageCount: Locator
-    private readonly productMetaData: Locator
-    private readonly productPriceData: Locator
+    private readonly eleUtil: ElementUtil;
+    private readonly header: Locator;
+    private readonly imageCount: Locator;
+    private readonly productMetaData: Locator;
+    private readonly productPriceData: Locator;
 
     private readonly productMap = new Map<string, string | number | null>()
 
@@ -22,13 +22,13 @@ export class ProductInfoPage {
     }
 
     async getProductHeader() {
-        const header = await this.eleUtil.getInnerText(this.header)
+        const header = await this.eleUtil.getInnerText(this.header);
         console.log('product header:' + header);
         return header.trim();
     }
 
       async getProductImagesCount(): Promise<number> {
-        await this.eleUtil.waitForElementVisible(this.imageCount)
+        await this.eleUtil.waitForElementVisible(this.imageCount);
         const imagesCount = await this.imageCount.count();
         console.log(`total no of images for ${await this.getProductHeader()}==>$imagesCount}`);
         return imagesCount
@@ -62,23 +62,22 @@ export class ProductInfoPage {
 
         let productMetaData: string[] = await this.productMetaData.allInnerTexts()
         for (let meta of productMetaData) {
-            let metadata: string[] = meta.split(':')
-            let metaKey = metadata[0].trim()
+            let metadata: string[] = meta.split(':');
+            let metaKey = metadata[0].trim();
             let metaValue = metadata[1].trim();
-
-            this.productMap.set(metaKey, metaValue)
+;
 
         }
 
     }
     async getProductPricingData() {
 
-        let productPricing: string[] = await this.productPriceData.allInnerTexts()
-        let productPrice = productPricing[0].trim()
+        let productPricing: string[] = await this.productPriceData.allInnerTexts();
+        let productPrice = productPricing[0].trim();
         let productExTax = productPricing[1].split(':')[1].trim();
 
-        this.productMap.set('price', productPrice)
-        this.productMap.set('extaxprice', productExTax)
+        this.productMap.set('price', productPrice);
+        this.productMap.set('extaxprice', productExTax);
 
     }
 
