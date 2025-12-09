@@ -18,19 +18,18 @@ export class RegisterPage {
 
     constructor(page: Page) {
         this.page = page
-        this.eleUtil = new ElementUtil(page)
-        this.firstNameInput = page.getByRole('textbox', { name: 'First Name' })
-        this.LastNameInput = page.getByRole('textbox', { name: 'Last Name' })
-        this.emailInput = page.getByRole('textbox', { name: 'E-Mail' })
-        this.telephoneInput = page.getByRole('textbox', { name: 'Telephone' })
-        this.passwordInput = page.getByRole('textbox', { name: 'Password' })
-        this.confirmPasswordInput = page.getByRole('textbox', { name: 'Password Confirm' })
-
-        this.newsletterYesRadio = page.getByRole('radio', { name: 'Yes', checked: false })
-        this.newsletterNoRadio = page.getByRole('radio', { name: 'No', checked: true })
-        this.agreeCheckbox = page.locator('[name="agree"]')
-        this.continueButton = page.getByRole('button', { name: 'Continue' })
-        this.successMsg = page.getByText('Your Account Has Been Created!', { exact: true })
+        this.eleUtil = new ElementUtil(page);
+        this.firstNameInput = page.getByRole('textbox', { name: 'First Name' });
+        this.LastNameInput = page.getByRole('textbox', { name: 'Last Name' });
+        this.emailInput = page.getByRole('textbox', { name: 'E-Mail' });
+        this.telephoneInput = page.getByRole('textbox', { name: 'Telephone' });
+        this.passwordInput = page.getByRole('textbox', { name: 'Password' });
+        this.confirmPasswordInput = page.getByRole('textbox', { name: 'Password Confirm' });
+        this.newsletterYesRadio = page.getByRole('radio', { name: 'Yes', checked: false });
+        this.newsletterNoRadio = page.getByRole('radio', { name: 'No', checked: true });
+        this.agreeCheckbox = page.locator('[name="agree"]');
+        this.continueButton = page.getByRole('button', { name: 'Continue' });
+        this.successMsg = page.getByText('Your Account Has Been Created!', { exact: true });
           //  console.log('Success message visible:', this.successMsg.isVisible());
 
          //  this.page.waitForSelector('text=Your Account Has Been Created', { timeout: 5000 });                               

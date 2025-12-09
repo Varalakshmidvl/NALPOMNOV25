@@ -17,9 +17,9 @@ for (let product of search) {
         await loginPage.goToLoginPage()
         let homePage: HomePage = await loginPage.doLogin('varalakshmiautomation@gmail.com', 'Hydchn66@@') */
         // let ResultsPage:ResultsPage =await homePage.dosearch('samsung')
-        let resultsPage: ResultsPage = await homePage.dosearch(product.searchkey)
-        let ProductInfoPage: ProductInfoPage = await resultsPage.selectProduct(product.productname)
-        expect(await ProductInfoPage.getProductHeader()).toBe(product.productname)
+        let resultsPage: ResultsPage = await homePage.dosearch(product.searchkey);
+        let ProductInfoPage: ProductInfoPage = await resultsPage.selectProduct(product.productname);
+        expect(await ProductInfoPage.getProductHeader()).toBe(product.productname);
     })
 
 }
@@ -29,9 +29,9 @@ for (let product of search) {
 
         
         // let ResultsPage:ResultsPage =await homePage.dosearch('samsung')
-        let resultsPage: ResultsPage = await homePage.dosearch(product.searchkey)
-        let ProductInfoPage: ProductInfoPage = await resultsPage.selectProduct(product.productname)
-        expect(await ProductInfoPage.getProductImagesCount()).toBe(product.imagecount)
+        let resultsPage: ResultsPage = await homePage.dosearch(product.searchkey);
+        let ProductInfoPage: ProductInfoPage = await resultsPage.selectProduct(product.productname);
+        expect(await ProductInfoPage.getProductImagesCount()).toBe(product.imagecount);
     })
 
 }
@@ -42,17 +42,17 @@ test(`Verify product MetaData`, async ({ homePage }) => {
         await loginPage.goToLoginPage()
         let homePage: HomePage = await loginPage.doLogin('varalakshmiautomation@gmail.com', 'Hydchn66@@') */
         // let ResultsPage:ResultsPage =await homePage.dosearch('samsung')
-        let resultsPage: ResultsPage = await homePage.dosearch('macbook')
-        let ProductInfoPage: ProductInfoPage = await resultsPage.selectProduct('Macbook pro')
+        let resultsPage: ResultsPage = await homePage.dosearch('macbook');
+        let ProductInfoPage: ProductInfoPage = await resultsPage.selectProduct('Macbook pro');
        //expect.soft(ProductInfoPage.getProductDetails)
 
-      let actualProductFullDetails= await ProductInfoPage.getProductDetails()
+      let actualProductFullDetails= await ProductInfoPage.getProductDetails();
       
-     expect.soft(actualProductFullDetails.get('header')).toBe('MacBook Pro')
-     expect.soft(actualProductFullDetails.get('Brand')).toBe('Apple')
-     expect.soft(actualProductFullDetails.get('Product Code')).toBe('Product 18')
-     expect.soft(actualProductFullDetails.get('Reward Points')).toBe('800')
-     expect.soft(actualProductFullDetails.get('Availability')).toBe('Out Of Stock')
+     expect.soft(actualProductFullDetails.get('header')).toBe('MacBook Pro');
+     expect.soft(actualProductFullDetails.get('Brand')).toBe('Apple');
+     expect.soft(actualProductFullDetails.get('Product Code')).toBe('Product 18');
+     expect.soft(actualProductFullDetails.get('Reward Points')).toBe('800');
+     expect.soft(actualProductFullDetails.get('Availability')).toBe('Out Of Stock');
     })
 
 test(`Verify product Pricing Details`, async ({ homePage }) => {
@@ -62,14 +62,14 @@ test(`Verify product Pricing Details`, async ({ homePage }) => {
        /*  let homePage: HomePage = await loginPage.doLogin('varalakshmiautomation@gmail.com', 'Hydchn66@@') */
        /*  // let ResultsPage:ResultsPage =await homePage.dosearch('samsung') */
         let resultsPage: ResultsPage = await homePage.dosearch('macbook')
-        let ProductInfoPage: ProductInfoPage = await resultsPage.selectProduct('Macbook pro')
+        let ProductInfoPage: ProductInfoPage = await resultsPage.selectProduct('Macbook pro');
        //expect.soft(ProductInfoPage.getProductDetails)
 
-      let actualProductFullDetails= await ProductInfoPage.getProductDetails()
+      let actualProductFullDetails= await ProductInfoPage.getProductDetails();
       
-     expect.soft(actualProductFullDetails.get('header')).toBe('MacBook Pro')
-     expect.soft(actualProductFullDetails.get('price')).toBe('$2,000.00')
-     expect.soft(actualProductFullDetails.get('extaxprice')).toBe('$2,000.00')
+     expect.soft(actualProductFullDetails.get('header')).toBe('MacBook Pro');
+     expect.soft(actualProductFullDetails.get('price')).toBe('$2,000.00');
+     expect.soft(actualProductFullDetails.get('extaxprice')).toBe('$2,000.00');
 
     })
 

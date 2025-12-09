@@ -15,7 +15,7 @@ test('verify Invalid login', async ({ page, baseURL }) => {
     await loginPage.goToLoginPage(baseURL);
     await loginPage.doLogin('varalakshmiautomation@gmail.com', 'Hydchn66');
     const errorMesg = await loginPage.getInvalidLoginMessage();
-    expect(errorMesg).toContain('Warning: No match for E-Mail Address and/or Password.')
+    expect(errorMesg).toContain('Warning: No match for E-Mail Address and/or Password.');
 
 });
 

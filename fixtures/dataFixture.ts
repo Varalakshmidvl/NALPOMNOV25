@@ -1,13 +1,13 @@
 import { expect, test as base } from '@playwright/test';
 import fs from 'fs';
 import { parse } from 'csv-parse/sync';
-
+//Added csv-parse
 type RegData = {
     firstName: string,
     lastName: string,
     telephone: string,
     password: string,
-    subscribeNewsletter: string
+    subscribeNewsletter: string,
 }
 
 let fileContent = fs.readFileSync('./data/register.csv', 'utf-8');

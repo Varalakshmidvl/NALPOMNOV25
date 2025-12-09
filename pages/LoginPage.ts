@@ -1,7 +1,7 @@
-import { Locator, Page } from '@playwright/test';
-import { ElementUtil } from '../utils/ElementUtil';
-import {HomePage} from '../pages/HomePage';
-import {RegisterPage} from '../pages/RegisterPage';
+import { Locator, Page } from '@playwright/test'
+import { ElementUtil } from '../utils/ElementUtil'
+import {HomePage} from '../pages/HomePage'
+import {RegisterPage} from '../pages/RegisterPage'
 
 export class LoginPage{
     
@@ -20,11 +20,11 @@ export class LoginPage{
     this.page = page;
    // this.emailId = page.locator('#input-email')
     this.eleUtil = new ElementUtil(page);
-    this.emailId=page.getByRole('textbox', { name: 'E-Mail Address' })
-    this.password=page.getByRole('textbox', { name: 'Password' })
-    this.loginBtn=page.locator(`input[type="submit"][value="Login"]`)
-    this.warningMsg =page.locator('.alert.alert-danger.alert-dismissible')
-    this.registerlink =page.getByText('Register',{exact:true})
+    this.emailId=page.getByRole('textbox', { name: 'E-Mail Address' });
+    this.password=page.getByRole('textbox', { name: 'Password' });
+    this.loginBtn=page.locator(`input[type="submit"][value="Login"]`);
+    this.warningMsg =page.locator('.alert.alert-danger.alert-dismissible');
+    this.registerlink =page.getByText('Register',{exact:true});
 
 
   }
@@ -41,10 +41,10 @@ export class LoginPage{
    async doLogin(email:string,password:string):Promise<HomePage>
    {
 
-    await this.eleUtil.fill(this.emailId,email)
-    await this.eleUtil.fill(this.password,password)
-    await this.eleUtil.click(this.loginBtn ,{force:true ,timeout:5000})
-    return new HomePage(this.page) //what we returning from loginpage is Homepage 
+    await this.eleUtil.fill(this.emailId,email);
+    await this.eleUtil.fill(this.password,password);
+    await this.eleUtil.click(this.loginBtn ,{force:true ,timeout:5000});
+    return new HomePage(this.page); //what we returning from loginpage is Homepage 
    
    
     /*  const pageTitle =await this.page.title();
@@ -60,7 +60,7 @@ export class LoginPage{
 
    const errorMsg =await this.eleUtil.getText(this.warningMsg);
    console.log('invalid login warning message'+ errorMsg);
-  return errorMsg
+  return errorMsg;
   
  }
   async navigateToRegisterPage(){

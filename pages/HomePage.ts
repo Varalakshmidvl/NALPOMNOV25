@@ -2,7 +2,7 @@ import { Locator, Page } from '@playwright/test';
 import { ElementUtil } from '../utils/ElementUtil';
 import {LoginPage} from '../pages/LoginPage';
 import {ResultsPage} from '../pages/ResultsPage';
-
+//Using Elementutil utiling here Homepage
 export class HomePage{
    
     
@@ -22,10 +22,10 @@ export class HomePage{
     this.page = page;
    // this.emailId = page.locator('#input-email')
     this.eleUtil = new ElementUtil(page);
-       this.loginLink =page.getByRole('link', { name: 'Login' })
-     this.logoutLink =page.getByRole('link', { name: 'Logout' })
-    this.search = page.getByRole('textbox', { name: 'Search' })
-     this.searchicon = page.locator(`#search > span.input-group-btn > button.btn`)
+       this.loginLink =page.getByRole('link', { name: 'Login' });
+     this.logoutLink =page.getByRole('link', { name: 'Logout' });
+    this.search = page.getByRole('textbox', { name: 'Search' });
+     this.searchicon = page.locator(`#search > span.input-group-btn > button.btn`);
    }
 
 

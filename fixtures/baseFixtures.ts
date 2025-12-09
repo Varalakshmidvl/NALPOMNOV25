@@ -17,10 +17,11 @@ export const test = base.extend<MyFixtures>({
 
         const homePage = await loginPage.doLogin(username, password);
         expect(homePage.isUserLoggedIn()).toBeTruthy();
-
+ 
         await use(homePage);
 
     }
 })
 
 export { expect }
+//to export in other classes

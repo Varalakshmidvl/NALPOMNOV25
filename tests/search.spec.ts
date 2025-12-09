@@ -14,8 +14,8 @@ for(let product of searchData) {
 test(`Verify product search ${product.searchkey}`,async({homePage}) =>{
 
 
- let resultsPage:ResultsPage =await homePage.dosearch(product.searchkey)
-    expect (await resultsPage.getSearchResultsCount()).toBe(product.resultscount)
+ let resultsPage:ResultsPage =await homePage.dosearch(product.searchkey);
+    expect (await resultsPage.getSearchResultsCount()).toBe(product.resultscount);
 })
 
 }
