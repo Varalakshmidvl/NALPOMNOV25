@@ -1,6 +1,6 @@
 
 import { LoginPage } from '../pages/LoginPage';
-import { test, expect } from '../fixtures/baseFixtures'
+import { test, expect } from '../fixtures/baseFixtures';
 import { HomePage } from '../pages/HomePage';
 
 
@@ -11,7 +11,7 @@ test('verify valid login', async ({ homePage }) => {
 
 test('verify Invalid login', async ({ page, baseURL }) => {
     //AAA
-    let loginPage = new LoginPage(page);
+    const loginPage = new LoginPage(page);
     await loginPage.goToLoginPage(baseURL);
     await loginPage.doLogin('varalakshmiautomation@gmail.com', 'Hydchn66');
     const errorMesg = await loginPage.getInvalidLoginMessage();

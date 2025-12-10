@@ -14,20 +14,20 @@ type RegData = {
     subscribeNewsletter: string
 }
 
-let fileContent = fs.readFileSync('./data/register.csv', 'utf-8');
+const fileContent = fs.readFileSync('./data/register.csv', 'utf-8');
 
-let registerationData:RegData[]  = parse(fileContent, {
+const registerationData:RegData[]  = parse(fileContent, {
     columns: true,
     skip_empty_lines: true
 });
 
-for (let user of registerationData) {
+for (const user of registerationData) {
     test(`@ sanity verify user is able to register ${user.firstName}`, async ({ page, baseURL }) => {
     
-        let loginPage = new LoginPage(page);
+        const loginPage = new LoginPage(page);
         await loginPage.goToLoginPage(baseURL);
-        let registerPage: RegisterPage = await loginPage.navigateToRegisterPage();
-        let isUserRegistered: boolean = await registerPage.registerUser(
+        const registerPage: RegisterPage = await loginPage.navigateToRegisterPage();
+        const isUserRegistered: boolean = await registerPage.registerUser(
             user.firstName,
             user.lastName,
             getRandomEmail(),
@@ -36,11 +36,11 @@ for (let user of registerationData) {
             user.subscribeNewsletter);
         expect(isUserRegistered).toBeTruthy();
 
-    })
+    });
 }
 
 function getRandomEmail() : string{
-    let randomValue = Math.random().toString(36).substring(2, 9);
+    const randomValue = Math.random().toString(36).substring(2, 9);
     return `auto_${randomValue}@nal.com`;
 }
 

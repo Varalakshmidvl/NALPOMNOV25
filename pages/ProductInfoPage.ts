@@ -15,9 +15,9 @@ export class ProductInfoPage {
         this.page = page;
         this.eleUtil = new ElementUtil(page);
         this.header = page.locator('h1');
-        this.imageCount = page.locator(`div#content img`);
-        this.productMetaData = page.locator(`(//div[@id='content']//ul[@class='list-unstyled'])[1]/li`);
-        this.productPriceData = page.locator(`(//div[@id='content']//ul[@class='list-unstyled'])[2]/li`);
+        this.imageCount = page.locator('div#content img');
+        this.productMetaData = page.locator('(//div[@id=\'content\']//ul[@class=\'list-unstyled\'])[1]/li');
+        this.productPriceData = page.locator('(//div[@id=\'content\']//ul[@class=\'list-unstyled\'])[2]/li');
     }
 
     async getProductHeader() {
@@ -60,7 +60,7 @@ export class ProductInfoPage {
     private async getProductMetaData() {
 
         const productMetaData: string[] = await this.productMetaData.allInnerTexts();
-        for (let meta of productMetaData) {
+        for (const meta of productMetaData) {
             const metadata: string[] = meta.split(':');
             const metaKey = metadata[0].trim();
             const metaValue = metadata[1].trim();

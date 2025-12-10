@@ -1,8 +1,8 @@
-import { ResultsPage } from '../pages/ResultsPage'
-import { test, expect } from '../fixtures/baseFixtures'
+import { ResultsPage } from '../pages/ResultsPage';
+import { test, expect } from '../fixtures/baseFixtures';
 //data provide for 'product searchKey and results count
 
-let searchData = [
+const searchData = [
    { searchkey:'macbook', resultscount:3},
    { searchkey:'samsung', resultscount:2},
    { searchkey:'imac', resultscount:1},
@@ -10,13 +10,13 @@ let searchData = [
    { searchkey:'motorola', resultscount:0}
 ];
 
-for(let product of searchData) {
+for(const product of searchData) {
 test(`Verify product search ${product.searchkey}`,async({homePage}) =>{
 
 
- let resultsPage:ResultsPage =await homePage.dosearch(product.searchkey);
+ const resultsPage:ResultsPage =await homePage.dosearch(product.searchkey);
     expect (await resultsPage.getSearchResultsCount()).toBe(product.resultscount);
-})
+});
 
 }
 

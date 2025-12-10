@@ -27,7 +27,7 @@ export class ResultsPage{
    }
 
    async selectProduct(productName:string){
-   console.log("=============Product name:=========== " + productName);
+   console.log('=============Product name:=========== ' + productName);
    await this.eleUtil.click(this.page.getByRole('link', { name: `${productName}` }));
    return new ProductInfoPage(this.page);
 
