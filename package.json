@@ -11,7 +11,7 @@
     "test:critical": "playwright test --grep @critical",
     "test:no-flaky": "playwright test --grep-invert @flaky",
     "test:dev": "npx playwright test --config=playwright.config.dev.ts",
-       "test:qa": "npx playwright test --config=playwright.config.qa.ts",
+    "test:qa": "npx playwright test --config=playwright.config.qa.ts",
     "test:stage": "npx playwright test --config=playwright.config.stage.ts",
     "test:prod": "npx playwright test --config=playwright.config.ts",
     "lint": "eslint . --ext .ts,.js --report-unused-disable-directives --max-warnings 0",
