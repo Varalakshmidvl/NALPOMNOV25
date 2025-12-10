@@ -111,7 +111,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: playwright-html-report
-          path: playwright-html-report
+          path: playwright-html-report 
 
       # 3️⃣ Verify downloaded reports
       - name: Verify reports
