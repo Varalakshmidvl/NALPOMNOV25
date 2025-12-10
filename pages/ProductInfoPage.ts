@@ -1,6 +1,5 @@
 import { Locator, Page } from '@playwright/test';
 import { ElementUtil } from '../utils/ElementUtil';
-
 export class ProductInfoPage {
 
     private readonly page: Page;
@@ -70,9 +69,9 @@ export class ProductInfoPage {
     }
     async getProductPricingData() {
 
-        let productPricing: string[] = await this.productPriceData.allInnerTexts();
-        let productPrice = productPricing[0].trim();
-        let productExTax = productPricing[1].split(':')[1].trim();
+        const productPricing: string[] = await this.productPriceData.allInnerTexts();
+        const productPrice = productPricing[0].trim();
+        const productExTax = productPricing[1].split(':')[1].trim();
 
         this.productMap.set('price', productPrice);
         this.productMap.set('extaxprice', productExTax);

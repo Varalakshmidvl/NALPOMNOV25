@@ -1,6 +1,5 @@
 import { Locator, Page ,expect} from '@playwright/test';
 import { ElementUtil } from '../utils/ElementUtil';
-
 export class RegisterPage {
     private readonly page: Page;
     private readonly firstNameInput: Locator;
@@ -17,7 +16,7 @@ export class RegisterPage {
     private readonly eleUtil;
 
     constructor(page: Page) {
-        this.page = page
+        this.page = page;
         this.eleUtil = new ElementUtil(page);
         this.firstNameInput = page.getByRole('textbox', { name: 'First Name' });
         this.LastNameInput = page.getByRole('textbox', { name: 'Last Name' });

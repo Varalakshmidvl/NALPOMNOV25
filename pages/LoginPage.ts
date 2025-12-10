@@ -26,7 +26,6 @@ export class LoginPage{
     this.warningMsg =page.locator('.alert.alert-danger.alert-dismissible');
     this.registerlink =page.getByText('Register',{exact:true});
 
-
   }
 
   //3.page actions/methods
