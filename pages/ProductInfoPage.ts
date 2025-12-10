@@ -10,7 +10,7 @@ export class ProductInfoPage {
     private readonly productMetaData: Locator;
     private readonly productPriceData: Locator;
 
-    private readonly productMap = new Map<string, string | number | null>()
+    private readonly productMap = new Map<string, string | number | null>();
 
     constructor(page: Page) {
         this.page = page;
@@ -31,7 +31,7 @@ export class ProductInfoPage {
         await this.eleUtil.waitForElementVisible(this.imageCount);
         const imagesCount = await this.imageCount.count();
         console.log(`total no of images for ${await this.getProductHeader()}==>$imagesCount}`);
-        return imagesCount
+        return imagesCount;
 
     } 
     //returning this method returning complete product details
@@ -60,13 +60,11 @@ export class ProductInfoPage {
     Availability: Out Of Stock */
     private async getProductMetaData() {
 
-        let productMetaData: string[] = await this.productMetaData.allInnerTexts()
+        const productMetaData: string[] = await this.productMetaData.allInnerTexts();
         for (let meta of productMetaData) {
-            let metadata: string[] = meta.split(':');
-            let metaKey = metadata[0].trim();
-            let metaValue = metadata[1].trim();
-;
-
+            const metadata: string[] = meta.split(':');
+            const metaKey = metadata[0].trim();
+            const metaValue = metadata[1].trim();
         }
 
     }
