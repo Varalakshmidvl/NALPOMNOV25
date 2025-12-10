@@ -2,9 +2,12 @@ import { Locator, Page } from '@playwright/test';
 import { ElementUtil } from '../utils/ElementUtil';
 import {LoginPage} from '../pages/LoginPage';
 import {ResultsPage} from '../pages/ResultsPage';
+
 //Using Elementutil utiling here Homepage
+//Access given
+
 export class HomePage{
-   
+  
     
     //1. page locators/objects/OR
 
