@@ -5,7 +5,7 @@ import {RegisterPage} from '../pages/RegisterPage';
 
 export class LoginPage{
     
-    //1. page locators/objects/OR
+    //1. page locators/
 
     private readonly page:Page;
     private readonly eleUtil;
@@ -29,7 +29,7 @@ export class LoginPage{
   }
 
   //3.page actions/methods
-    //Navigate to login Page
+    
 
      async goToLoginPage(baseURL: string | undefined){
        await this.page.goto(baseURL+'?route=account/login');
@@ -45,11 +45,7 @@ export class LoginPage{
     await this.eleUtil.click(this.loginBtn ,{force:true ,timeout:5000});
     return new HomePage(this.page); //what we returning from loginpage is Homepage 
    
-   
-    /*  const pageTitle =await this.page.title();
-    console.log(`Home page title: ${pageTitle}`);
-    return pageTitle */
-   
+      
    }
 
 
