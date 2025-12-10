@@ -7,7 +7,7 @@
 # ✅ Playwright browsers cached
 # ✅ Reports published to GitHub Pages
 # ============================================
-
+# **********************************
 name: Playwright Manual Run
 
 on:
