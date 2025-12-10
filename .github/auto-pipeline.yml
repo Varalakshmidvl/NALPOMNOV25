@@ -27,7 +27,7 @@ name: Playwright Auto Pipeline
 on:
   # Scheduled runs (cron job)
   #schedule:
-  #  - cron: '*/5 * * * *'  # Every 5 minutes (minimum effective ~5 min on GitHub)
+  #  - cron: '*/15 * * * *'  # Every 5 minutes (minimum effective ~5 min on GitHub)
 
   # Manual trigger
   workflow_dispatch:
@@ -140,8 +140,7 @@ jobs:
           rm -rf allure-results playwright-report playwright-html-report test-results
 
       - name: 🧪 Run DEV tests
-        run:  npx playwright test --config=playwright.config.dev.ts
-        
+        run: npx playwright test --grep "@sample" --config=playwright.config.dev.ts
         env:
           CI: true
           ALLURE_ENVIRONMENT: DEV
@@ -288,17 +287,18 @@ jobs:
           name: test-results-qa
           path: test-results/
           retention-days: 7
-# ============================================
+
+  # ============================================
   # STAGE Environment Tests
   # ============================================
-   stage-tests:
-     name: 🎯 STAGE Tests
-     runs-on: ubuntu-latest
-     needs: qa-tests
-     environment:
-       name: staging
-      
-   steps:
+  stage-tests:
+    name: 🎯 STAGE Tests
+    runs-on: ubuntu-latest
+    needs: qa-tests
+    environment:
+      name: staging
+    
+    steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
@@ -747,10 +747,10 @@ jobs:
           echo "   HTML:       https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-html-report/index.html"
           echo "   Allure:     https://naveenanimation20.github.io/June2025PWFramework/dev/allure-report/index.html"
           echo ""
-          echo "🔍 QA Reports:
-          echo "   Playwright: https://Varalakshmidvl.github.io/NALPOMNOV25/qa/playwright-report/index.html"
+          echo "🔍 QA Reports:"
+          echo "   Playwright: https://Varalakshmidvl.github.io/NALPOMNOV25/qa/playwright-report"
           echo "   HTML:       https://Varalakshmidvl.github.io/NALPOMNOV25/qa/playwright-html-report/index.html"
-          echo "   Allure:     https://Varalakshmidvl.github.io/NALPOMNOV25/qa/allure-report/index.html"
+          echo "   Allure:     https://Varalakshmidvl.github.io/NALPOMNOV25/qa/allure-report"
           echo ""
           echo "🎯 STAGE Reports:"
           echo "   Playwright: https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-report/index.html"
@@ -873,7 +873,7 @@ jobs:
                       "type": "section",
                       "text": {
                         "type": "mrkdwn",
-                        "text": "*📊 View Reports:*\n<https://Varalakshmidvl.github.io/NALPOMNOV25/|Test Reports Dashboard>"
+                        "text": "*📊 View Reports:*\n<https://naveenanimation20.github.io/June2025PWFramework/|Test Reports Dashboard>"
                       }
                     },
                     {
@@ -967,14 +967,14 @@ jobs:
 
                   <h3>📊 View Reports</h3>
                   <p>
-                    <a href="https://Varalakshmidvl.github.io/NALPOMNOV25/" class="btn">📊 Reports Dashboard</a>
+                    <a href="https://naveenanimation20.github.io/June2025PWFramework/" class="btn">📊 Reports Dashboard</a>
                     <a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" class="btn">🔗 View Workflow Run</a>
                   </p>
 
                   <h4>Individual Environment Reports:</h4>
                   <ul>
                     <li><strong>DEV:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/dev/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-report/">Playwright</a></li>
-                    <li><strong>QA:</strong> <a href="https://Varalakshmidvl.github.io/NALPOMNOV25/qa/allure-report/">Allure</a> | <a href="https://Varalakshmidvl.github.io/NALPOMNOV25/qa/playwright-report/">Playwright</a></li>
+                    <li><strong>QA:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/qa/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/qa/playwright-report/">Playwright</a></li>
                     <li><strong>STAGE:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/stage/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-report/">Playwright</a></li>
                     <li><strong>PROD:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/prod/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/prod/playwright-report/">Playwright</a></li>
                   </ul>
@@ -998,4 +998,4 @@ jobs:
           echo "Slack: ${{ steps.slack.outcome == 'success' && '✅ Sent' || (steps.slack.outcome == 'skipped' && '⏭️ Skipped' || '❌ Failed') }}"
           echo "Email: ${{ steps.email.outcome == 'success' && '✅ Sent' || '❌ Failed - Check logs above' }}"
           echo ""
-          echo "============================================"  
+          echo "============================================"
