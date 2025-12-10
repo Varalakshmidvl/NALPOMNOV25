@@ -14,11 +14,11 @@ export class ProductInfoPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.eleUtil = new ElementUtil(page)
-        this.header = page.locator('h1')
-        this.imageCount = page.locator(`div#content img`)
-        this.productMetaData = page.locator(`(//div[@id='content']//ul[@class='list-unstyled'])[1]/li`)
-        this.productPriceData = page.locator(`(//div[@id='content']//ul[@class='list-unstyled'])[2]/li`)
+        this.eleUtil = new ElementUtil(page);
+        this.header = page.locator('h1');
+        this.imageCount = page.locator(`div#content img`);
+        this.productMetaData = page.locator(`(//div[@id='content']//ul[@class='list-unstyled'])[1]/li`);
+        this.productPriceData = page.locator(`(//div[@id='content']//ul[@class='list-unstyled'])[2]/li`);
     }
 
     async getProductHeader() {
@@ -38,8 +38,8 @@ export class ProductInfoPage {
 
       async getProductDetails(): Promise<Map<string, string|number|null >>
        {
-        this.productMap.set('header', await this.getProductHeader())
-        this.productMap.set('imagecount', await this.getProductImagesCount())
+        this.productMap.set('header', await this.getProductHeader());
+        this.productMap.set('imagecount', await this.getProductImagesCount());
                     await this.getProductMetaData();
         await this.getProductPricingData();
 

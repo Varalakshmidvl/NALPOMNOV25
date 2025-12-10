@@ -26,7 +26,7 @@ type csvFixture={
    
          regData: async({}, use)=>{
             //....
-         
+          
         const fileContent = fs.readFileSync('./data/register.csv', 'utf-8');
 
        const registerationData:RegData[]  = parse(fileContent, 
