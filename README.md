@@ -6,9 +6,10 @@ Welcome to the **NALPOMNOV25** automation project. Below you can find the latest
 
 ## Workflow Status
 
-[![Playwright Tests](https://github.com/naveenanimation20/June2025PWFramework/actions/workflows/playwright.yml/badge.svg)](https://github.com/naveenanimation20/June2025PWFramework/actions/workflows/playwright.yml)
+[![Playwright Tests](https://github.com/Varalakshmidvl/NALPOMNOV25/actions/workflows/playwright.yml/badge.svg)](https://github.com/Varalakshmidvl/NALPOMNOV25/actions/workflows/playwright.yml)
 
 ---
+
 
 ## HTML Reports
 
