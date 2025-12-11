@@ -37,9 +37,20 @@ export default defineConfig({
     appUsername:'sarayusri@gmail.com',
     appPassword:'Chnchn$$@@'
    },
-
+   
+    projects: [
+    {
+      name: 'Google Chrome',
+      use: {
+        channel: 'chrome',
+        viewport: { width: 1920, height: 1080 },  // ✅ Fixed viewport for CI (no --start-maximized in headless)
+        launchOptions: {
+          args: ['--window-size=1920,1080'],
+        }
+      }
+      }]
   /* Configure projects for major browsers */
-  projects: [
+  
     // {
     //   name: 'chromium',
     //   use: { ...devices['Desktop Chrome'] },
@@ -65,8 +76,8 @@ export default defineConfig({
     //   use: { ...devices['iPhone 12'] },
     // },
 
-    /* Test against branded browsers. */
-    {
+   // /* Test against branded browsers. */
+   /* {
       name: 'Microsoft Edge',
       use: { ...devices['Desktop Edge'], channel: 'msedge' },
      },
@@ -75,7 +86,7 @@ export default defineConfig({
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     },
-  ],
+  */
 
  /*  /* Run your local dev server before starting the tests */
   // webServer: {
@@ -83,4 +94,4 @@ export default defineConfig({
   //   url: 'http://localhost:3000',
   //   reuseExistingServer: !process.env.CI,
   // }, */
-});
+  });

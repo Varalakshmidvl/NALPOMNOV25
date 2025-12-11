@@ -43,6 +43,7 @@ jobs:
   test:
     name: 🧪 ${{ github.event.inputs.environment }} | ${{ github.event.inputs.browser }}
     runs-on: ubuntu-latest
+    
     environment:
       name: ${{ github.event.inputs.environment }}
     
