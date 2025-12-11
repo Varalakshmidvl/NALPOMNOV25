@@ -743,7 +743,7 @@ jobs:
           echo "   https://Varalakshmidvl.github.io/NALPOMNOV25/"
           echo ""
           echo "🔧 DEV Reports:"
-          echo "   Playwright: https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-report/index.html"
+          echo "   Playwright: https://Varalakshmidvl.github.io/NALPOMNOV25/dev/playwright-report/index.html"
           echo "   HTML:       https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-html-report/index.html"
           echo "   Allure:     https://naveenanimation20.github.io/June2025PWFramework/dev/allure-report/index.html"
           echo ""
@@ -753,12 +753,12 @@ jobs:
           echo "   Allure:     https://Varalakshmidvl.github.io/NALPOMNOV25/qa/allure-report"
           echo ""
           echo "🎯 STAGE Reports:"
-          echo "   Playwright: https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-report/index.html"
+          echo "   Playwright: https://Varalakshmidvl.github.io/NALPOMNOV25/stage/playwright-report/index.html"
           echo "   HTML:       https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-html-report/index.html"
           echo "   Allure:     https://naveenanimation20.github.io/June2025PWFramework/stage/allure-report/index.html"
           echo ""
           echo "🚀 PROD Reports:"
-          echo "   Playwright: https://naveenanimation20.github.io/June2025PWFramework/prod/playwright-report/index.html"
+          echo "   Playwright: https://Varalakshmidvl.github.io/NALPOMNOV25/prod/playwright-report/index.html"
           echo "   HTML:       https://naveenanimation20.github.io/June2025PWFramework/prod/playwright-html-report/index.html"
           echo "   Allure:     https://naveenanimation20.github.io/June2025PWFramework/prod/allure-report/index.html"
           echo ""
@@ -973,9 +973,9 @@ jobs:
 
                   <h4>Individual Environment Reports:</h4>
                   <ul>
-                    <li><strong>DEV:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/dev/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-report/">Playwright</a></li>
-                    <li><strong>QA:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/qa/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/qa/playwright-report/">Playwright</a></li>
-                    <li><strong>STAGE:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/stage/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-report/">Playwright</a></li>
+                    <li><strong>DEV:</strong> <a href="https://Varalakshmidvl.github.io/NALPOMNOV25/dev/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/dev/playwright-report/">Playwright</a></li>
+                    <li><strong>QA:</strong> <a href="https://Varalakshmidvl.github.io/NALPOMNOV25/qa/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/qa/playwright-report/">Playwright</a></li>
+                    <li><strong>STAGE:</strong> <a href="https://Varalakshmidvl.github.io/NALPOMNOV25/stage/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/stage/playwright-report/">Playwright</a></li>
                     <li><strong>PROD:</strong> <a href="https://naveenanimation20.github.io/June2025PWFramework/prod/allure-report/">Allure</a> | <a href="https://naveenanimation20.github.io/June2025PWFramework/prod/playwright-report/">Playwright</a></li>
                   </ul>
                 </div>
