@@ -4,12 +4,12 @@ import { test, expect } from '../fixtures/baseFixtures';
 import { HomePage } from '../pages/HomePage';
 
 
-test('verify valid login', async ({ homePage }) => {
+test('@login should valid login', async ({ homePage }) => {
     await expect(homePage.page).toHaveTitle('My Account');
 });
 
 
-test('verify Invalid login', async ({ page, baseURL }) => {
+test('@login should Invalid login', async ({ page, baseURL }) => {
     //AAA
     const loginPage = new LoginPage(page);
     await loginPage.goToLoginPage(baseURL);
