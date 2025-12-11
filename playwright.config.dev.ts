@@ -30,7 +30,7 @@ export default defineConfig({
     screenshot:'on-first-failure',
     video :'on',
     baseURL:'https://naveenautomationlabs.com/opencart/index.php',
-    
+    //Added config dev 
          
   },
   
