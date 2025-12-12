@@ -7,7 +7,7 @@ export class Utils{
     private page:Page
     private defaultTimeOut:number =30000;
 
-    constructor(page:Page,timeout: number =3000){
+    constructor(page:Page,timeout: number =6000){
     this.page =page ;
      this.defaultTimeOut =timeout ;
     }
