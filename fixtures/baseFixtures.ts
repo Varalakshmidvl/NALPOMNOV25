@@ -24,4 +24,3 @@ export const test = base.extend<MyFixtures>({
 });
 
 export { expect };
-//to export in other classes
