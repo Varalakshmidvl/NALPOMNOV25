@@ -35,7 +35,7 @@ export default defineConfig({
   },
   
    metadata:{
-    appUsername:'varalakshmiautomation@gmail.com',
+    appUsername:'bynaanil@gmail.com',
     appPassword:'Hydchn66@@'
    },
 
