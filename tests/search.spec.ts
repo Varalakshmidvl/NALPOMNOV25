@@ -20,9 +20,3 @@ test(`Verify product search ${product.searchkey}`,async({homePage}) =>{
 
 }
 
-
-
-/* let loginPage = new LoginPage(page)
-  await loginPage.goToLoginPage()
-  let homePage: HomePage = await loginPage.doLogin('varalakshmiautomation@gmail.com', 'Hydchn66@@')
- // let ResultsPage:ResultsPage =await homePage.dosearch('samsung') */
